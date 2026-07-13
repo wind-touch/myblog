@@ -6,11 +6,14 @@ class Base(DeclarativeBase):
     pass
 
 
-class Test(Base):
-    __tablename__ = "test"
+class User(Base):
+    __tablename__ = "users"
 
     id = Column(Integer,
                 primary_key=True,
                 autoincrement=True)
-    message = Column(String(200),
-                     nullable=False)
+    username = Column(String(50),
+                      nullable=False,
+                      unique=True)
+    hashed_password = Column(String,
+                             nullable=False)
