@@ -1,3 +1,12 @@
 progress tree/
-.vscode/
+
+# Python
+__pycache__/
+*.pyc/
+*.egg-info/
 .venv/
+
+# IDE
+.vscode/
+
+.env
